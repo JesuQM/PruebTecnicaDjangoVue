@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  backend:
+    build: ./contactos
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./contactos:/app   
+    environment:
+      - DEBUG=1            
+
+  frontend:
+    build: ./contactos-front
+    ports:
+      - "8080:80"        
